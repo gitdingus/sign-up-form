@@ -1,0 +1,73 @@
+@font-face{
+    font-family: "Norse Bold";
+    src: url("Norse-Bold.otf") format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+.side-banner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40vw;
+    height: 100vh;
+}
+
+.side-banner .banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0, .5);
+    height: 165px;
+}
+
+.side-banner .banner img{
+    width: 100px;
+}
+
+.side-banner .banner p{
+    font-family: "Norse Bold";
+    font-size: 90px;
+    color: white;
+}
+
+.side-banner .bg-credit p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+}
+
+.side-banner .bg-credit p a{
+    color: white;
+}
+
+.sign-up-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    width: 60vw;
+}
+
+.persuasion{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+.sign-up-area div{
+    border: 1px solid black;
+}
