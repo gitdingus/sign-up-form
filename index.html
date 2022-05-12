@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Odin - Sign up</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </head>
     <body>
 
@@ -24,41 +24,42 @@
             </div>
             <div class="form">
                 <h1>Let's do this!</h1>
+                <p>Required fields marked with an asteriks (*)</p>
                 <form action="" method="" id="sign-up-form">
                     <div class="input-group">
                         <div class="input-field">
+                            <input type="text" id="first-name" required>
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name">
                         </div>
                         <div class="input-field">
+                            <input type="text" id="last-name" required>
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name">
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-field">
+                            <input type="email" id="email-address" title="Please enter a valid email address." required>
                             <label for="email-address">Email</label>
-                            <input type="email" id="email-address">
-                        </div>
+                      </div>
                         <div class="input-field">
-                            <label for="phone-number">Phone Number</label>
                             <input type="tel" id="phone-number">
+                            <label for="phone-number">Phone Number</label>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-field">
+                            <input type="password" id="password" class="password" required>
                             <label for="password">Password</label>
-                            <input type="password" id="password" class="password">
                         </div>
                         <div class="input-field">
+                            <input type="password" id="confirm-password" class="password" required>
                             <label for="confirm-password">Confirm Password</label>
-                            <input type="password" id="confirm-password" class="password">
                         </div>
                     </div>
                 </form>
             </div>
             <div class="sign-up-footer">
-                <button type="submit" form="sign-up-form">Create Account</button>
+                <button id="submit-button" type="submit" form="sign-up-form">Create Account</button>
                 <p>Already have an account? <a href="">Log in</a></p>
             </div>
             

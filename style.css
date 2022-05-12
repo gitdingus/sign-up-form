@@ -13,6 +13,7 @@
 
 body{
     --main-font: "Roboto";
+    background-color: #f3faf8;
     margin:0;
     padding:0;
     display: flex;
@@ -63,7 +64,6 @@ body{
 }
 
 .sign-up-area{
-    background-color: #f3faf8;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,7 +89,6 @@ body{
 }
 .sign-up-area .form .input-group {
     display: flex;
-    justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0px;
@@ -97,14 +96,23 @@ body{
 
 .sign-up-area .form .input-field{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 0px;
     margin-bottom: 20px;
+    margin-right: 50px;
 }
 
 .sign-up-area .form h1{
     font-family: var(--main-font);
     font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.sign-up-area .form > p{
+    font-size: .8em;
+    font-family: var(--main-font);
+    margin:0;
+    margin-bottom: 8px;
 }
 
 input{
@@ -119,14 +127,19 @@ input:focus{
     box-shadow: 2px 2px 5px rgb(188, 188, 216);
 }
 
-input.password{
-    border: 1px solid black;
+input:required + label::after{
+    content:"*";
 }
-.persuasion{
+
+input.invalid, input:invalid{
+    outline: 2px solid red;
+    box-shadow: 4px 4px 5px rgb(196, 131, 131);
+}
+.sign-up-area .persuasion{
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 1.25em;
-    width: 50ch;
+    width: min(50ch, 80%);
 }
 
 .sign-up-footer button{
@@ -151,3 +164,14 @@ input.password{
     text-decoration: none;
 }
 
+@media (max-width: 600px){
+    .side-banner{
+        display: none;
+    }
+
+    .sign-up-area{
+        width: 100vw;
+    }
+
+    
+}
